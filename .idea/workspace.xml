@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ef06cf4f-208c-4506-b0a6-b4f297006721" name="Changes" comment="test commit" />
+    <list default="true" id="ef06cf4f-208c-4506-b0a6-b4f297006721" name="Changes" comment="Schreiben in Datei funktioniert jetzt">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/output.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,11 +32,20 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Q536353/IdeaProjects/pt-dashb-backend/data.json",
     "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.general",
+    "two.files.diff.last.used.file": "C:/Users/Q536353/IdeaProjects/pt-dashb-backend/data.json"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Q536353\IdeaProjects\pt-dashb-backend" />
+      <recent name="C:\Users\Q536353\IdeaProjects\pt-dashb-backend\.idea" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -48,7 +62,35 @@
       <option name="project" value="LOCAL" />
       <updated>1666169910209</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="test code zum auslesen der json datei">
+      <created>1666170730636</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1666170730636</updated>
+    </task>
+    <task id="LOCAL-00003" summary="test code zum auslesen der json datei">
+      <created>1666170873959</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1666170873959</updated>
+    </task>
+    <task id="LOCAL-00004" summary="test code zum auslesen der json datei">
+      <created>1666171008971</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1666171008971</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Schreiben in Datei funktioniert jetzt">
+      <created>1666180788566</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1666180788566</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -62,7 +104,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="Timo" />
+                        <option value="origin/Read" />
                       </list>
                     </value>
                   </entry>
@@ -76,6 +118,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="test commit" />
+    <MESSAGE value="test code zum auslesen der json datei" />
+    <MESSAGE value="Schreiben in Datei funktioniert jetzt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Schreiben in Datei funktioniert jetzt" />
   </component>
 </project>
