@@ -1,15 +1,18 @@
+#!/usr/bin/env python
+# -*- coding: iso-8859-1 -*-
+
 import json
 
 
-# Opening JSON file
 f = open('data.json')
 
-# returns JSON object as
-# a dictionary
 data = json.load(f)
+nextDepartures = []
 
+for i in range(5):
+    nextDepartures.append(data[i])
 
-print data
+with open("output.json", "w") as outfile:
+    outfile.write(json.dumps(nextDepartures))
 
-# Closing file
 f.close()
