@@ -1,29 +1,69 @@
 import json
 import datetime
 
+input = ["olympiazentrum.json", "petuelring.json", "olympiaparkEissportstadion.json"]
+def torZusammenfassung(inputFiles, outputFile, stationName):
+    f = []
+    data = []
 
-f = open('data.json')
+    for i in range(len(inputFiles)):
+        with open(inputFiles[i]) as file:
+            f.append(json.load(file))
+        data.append(f[i])
 
-data = json.load(f)
-nextDepartures = []
+    nextDeparturesStation = []
+    nextDepartures = []
 
-for i in range(20):
-    if data[i]["plannedDepartureTime"] / 1000 + data[i]["delayInMinutes"] * 60 - datetime.datetime.now().timestamp() - 1200 >= 0:
-        data[i].pop("sev")
-        data[i].pop("network")
-        data[i].pop("stopPointGlobalId")
-        data[i].pop("bannerHash")
-        data[i].pop("messages")
-        data[i].pop("platform", None)
-        data[i].pop("realtime")
-        data[i].pop("trainType")
-        nextDepartures.append(data[i])
+    for j in range(len(data)):
+        for i in range(len(data[j])):
+            if data[j][i]["realtime"] is True:
+                if data[j][i]["plannedDepartureTime"] / 1000 + data[j][i]["delayInMinutes"] * 60 - datetime.datetime.now().timestamp() <= 1200:
+                    data[j][i].pop("sev")
+                    data[j][i].pop("network")
+                    data[j][i].pop("stopPointGlobalId")
+                    data[j][i].pop("bannerHash")
+                    data[j][i].pop("messages")
+                    data[j][i].pop("platform", None)
+                    data[j][i].pop("realtime")
+                    data[j][i].pop("trainType")
+                    nextDeparturesStation.append(data[j][i])
 
-dictionary1 = {"Olympiazentrum": {
-    "transportTypes": ["UBAHN", "BUS"],
-               "trips": nextDepartures}}
+            elif data[j][i]["plannedDepartureTime"] / 1000 - datetime.datetime.now().timestamp() <= 1200:
+                data[j][i].pop("sev")
+                data[j][i].pop("network")
+                data[j][i].pop("stopPointGlobalId")
+                data[j][i].pop("bannerHash")
+                data[j][i].pop("messages")
+                data[j][i].pop("platform", None)
+                data[j][i].pop("realtime")
+                data[j][i].pop("trainType")
+                nextDeparturesStation.append(data[j][i])
+        nextDepartures.append(nextDeparturesStation.copy())
+        del nextDeparturesStation[:]
 
-with open("output.json", "w") as outfile:
-    outfile.write(json.dumps(dictionary1))
+    transportTypes = []
+    transportTypesStation = []
 
-f.close()
+    for k in range(len(nextDepartures)):
+        for i in range(len(nextDepartures[k])):
+            double = False
+            for j in range(len(transportTypesStation)):
+                if nextDepartures[k][i]["transportType"] == transportTypesStation[j]:
+                    double = True
+            if double is False:
+                transportTypesStation.append(nextDepartures[k][i]["transportType"])
+        transportTypes.append(transportTypesStation.copy())
+        del transportTypesStation[:]
+
+    output = []
+
+    for i in range(len(stationName)):
+        output.append({stationName[i]: {
+            "transportTypes": transportTypes[i],
+            "trips": nextDepartures[i]}})
+
+    with open(outputFile, "w") as outfile:
+        outfile.write(json.dumps(output))
+
+
+torZusammenfassung(input, "tor1.json", ["Olympiazentrum", "Petuelring", "Olympiapark Eissportstadion"])
