@@ -1,11 +1,17 @@
+#imports
 import json
 import datetime
 
+#testarray
 input = ["olympiazentrum.json", "petuelring.json", "olympiaparkEissportstadion.json"]
 def torZusammenfassung(inputFiles, outputFile, stationName):
-    f = []
-    data = []
+    #inputfile: input
+    #outputfile: output
+    #stationname. namen der Stationen
+    f = [] #zwischenspeicher
+    data = [] #
 
+    # data array wird mit inputfiles gefüllt
     for i in range(len(inputFiles)):
         with open(inputFiles[i]) as file:
             f.append(json.load(file))
@@ -14,6 +20,10 @@ def torZusammenfassung(inputFiles, outputFile, stationName):
     nextDeparturesStation = []
     nextDepartures = []
 
+    # j = station
+    # i = index fahrt
+    # rechnet aus ob es innerhalb der nächsten 20 minuten ist
+    # unwichtige Daten raushauen
     for j in range(len(data)):
         for i in range(len(data[j])):
             if data[j][i]["realtime"] is True:
@@ -44,6 +54,8 @@ def torZusammenfassung(inputFiles, outputFile, stationName):
     transportTypes = []
     transportTypesStation = []
 
+    # schaut welchen Transporttyp es gibt
+    # erstellt einen Array für jede Station
     for k in range(len(nextDepartures)):
         for i in range(len(nextDepartures[k])):
             double = False
@@ -57,11 +69,14 @@ def torZusammenfassung(inputFiles, outputFile, stationName):
 
     output = []
 
+    # output wird erstellt
+    # output ist Liste mit wichtigen Daten, die ausgegeben werden
     for i in range(len(stationName)):
         output.append({stationName[i]: {
             "transportTypes": transportTypes[i],
             "trips": nextDepartures[i]}})
 
+    # output ausgeben in File
     with open(outputFile, "w") as outfile:
         outfile.write(json.dumps(output))
 
