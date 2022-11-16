@@ -14,8 +14,7 @@ def torZusammenfassung(inputFiles, outputFile, stationName):
     # data array wird mit inputfiles gefüllt
     for i in range(len(inputFiles)):
         with open(inputFiles[i]) as file:
-            f.append(json.load(file))
-        data.append(f[i])
+            data.append(json.load(file))
 
     nextDeparturesStation = []
     nextDepartures = []
