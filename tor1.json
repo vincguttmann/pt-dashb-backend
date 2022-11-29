@@ -1,1 +1,109 @@
-[{"Olympiazentrum": {"transportTypes": ["UBAHN", "BUS"], "trips": [{"plannedDepartureTime": 1666270920000, "delayInMinutes": 0, "transportType": "UBAHN", "label": "U3", "destination": "F\u00c3\u00bcrstenried West", "cancelled": false, "occupancy": "MEDIUM"}, {"plannedDepartureTime": 1666271040000, "delayInMinutes": 0, "transportType": "BUS", "label": "180", "destination": "Kieferngarten U", "cancelled": false, "occupancy": "LOW"}, {"plannedDepartureTime": 1666271100000, "delayInMinutes": 3, "transportType": "BUS", "label": "173", "destination": "Petuelring U", "cancelled": false, "occupancy": "LOW"}, {"plannedDepartureTime": 1666271100000, "delayInMinutes": 0, "transportType": "BUS", "label": "173", "destination": "Feldmoching Bf. U S", "cancelled": false, "occupancy": "LOW"}, {"plannedDepartureTime": 1666271280000, "delayInMinutes": 0, "transportType": "UBAHN", "label": "U3", "destination": "Moosach", "cancelled": false, "occupancy": "MEDIUM"}, {"plannedDepartureTime": 1666271520000, "delayInMinutes": 0, "transportType": "BUS", "label": "180", "destination": "Berduxstra\u00c3\u0178e via Westfriedhof U", "cancelled": false, "occupancy": "LOW"}, {"plannedDepartureTime": 1666271520000, "delayInMinutes": 0, "transportType": "UBAHN", "label": "U3", "destination": "F\u00c3\u00bcrstenried West", "cancelled": false, "occupancy": "MEDIUM"}, {"plannedDepartureTime": 1666271700000, "delayInMinutes": 2, "transportType": "BUS", "label": "173", "destination": "Feldmoching Bf. U S", "cancelled": false, "occupancy": "LOW"}, {"plannedDepartureTime": 1666271700000, "delayInMinutes": 0, "transportType": "BUS", "label": "173", "destination": "Petuelring U", "cancelled": false, "occupancy": "LOW"}, {"plannedDepartureTime": 1666271880000, "delayInMinutes": 4, "transportType": "UBAHN", "label": "U3", "destination": "Moosach", "cancelled": false, "occupancy": "MEDIUM"}, {"plannedDepartureTime": 1666272120000, "delayInMinutes": 0, "transportType": "UBAHN", "label": "U3", "destination": "F\u00c3\u00bcrstenried West", "cancelled": false, "occupancy": "MEDIUM"}, {"plannedDepartureTime": 1666272240000, "delayInMinutes": 0, "transportType": "BUS", "label": "180", "destination": "Kieferngarten U", "cancelled": false, "occupancy": "LOW"}, {"plannedDepartureTime": 1666272300000, "delayInMinutes": 0, "transportType": "BUS", "label": "173", "destination": "Feldmoching Bf. U S", "cancelled": false, "occupancy": "LOW"}, {"plannedDepartureTime": 1666272300000, "delayInMinutes": 0, "transportType": "BUS", "label": "173", "destination": "Petuelring U", "cancelled": false, "occupancy": "LOW"}, {"plannedDepartureTime": 1666272480000, "delayInMinutes": 0, "transportType": "UBAHN", "label": "U3", "destination": "Moosach", "cancelled": false, "occupancy": "MEDIUM"}, {"plannedDepartureTime": 1666272720000, "delayInMinutes": 0, "transportType": "BUS", "label": "180", "destination": "Berduxstra\u00c3\u0178e via Westfriedhof U", "cancelled": false, "occupancy": "LOW"}, {"plannedDepartureTime": 1666272720000, "delayInMinutes": 0, "transportType": "UBAHN", "label": "U3", "destination": "F\u00c3\u00bcrstenried West", "cancelled": false, "occupancy": "MEDIUM"}, {"plannedDepartureTime": 1666272900000, "delayInMinutes": 0, "transportType": "BUS", "label": "173", "destination": "Petuelring U", "cancelled": false, "occupancy": "LOW"}, {"plannedDepartureTime": 1666272900000, "delayInMinutes": 0, "transportType": "BUS", "label": "173", "destination": "Feldmoching Bf. U S", "cancelled": false, "occupancy": "LOW"}, {"plannedDepartureTime": 1666273080000, "delayInMinutes": 0, "transportType": "UBAHN", "label": "U3", "destination": "Moosach", "cancelled": false, "occupancy": "MEDIUM"}]}}, {"Petuelring": {"transportTypes": ["BUS", "UBAHN"], "trips": [{"plannedDepartureTime": 1666337700000, "delayInMinutes": -1, "transportType": "BUS", "label": "173", "destination": "Petuelring U", "cancelled": false, "occupancy": "LOW"}, {"plannedDepartureTime": 1666337880000, "delayInMinutes": 2, "transportType": "UBAHN", "label": "U3", "destination": "Moosach", "cancelled": false, "occupancy": "LOW"}, {"plannedDepartureTime": 1666338120000, "delayInMinutes": 0, "transportType": "UBAHN", "label": "U3", "destination": "F\u00c3\u00bcrstenried West", "cancelled": false, "occupancy": "MEDIUM"}, {"plannedDepartureTime": 1666338240000, "delayInMinutes": 0, "transportType": "BUS", "label": "180", "destination": "Kieferngarten U", "cancelled": false, "occupancy": "LOW"}, {"plannedDepartureTime": 1666338300000, "delayInMinutes": 0, "transportType": "BUS", "label": "173", "destination": "Feldmoching Bf. U S", "cancelled": false, "occupancy": "LOW"}, {"plannedDepartureTime": 1666338300000, "transportType": "BUS", "label": "173", "destination": "Petuelring U", "cancelled": false, "occupancy": "LOW"}, {"plannedDepartureTime": 1666338480000, "delayInMinutes": 1, "transportType": "UBAHN", "label": "U3", "destination": "Moosach", "cancelled": false, "occupancy": "LOW"}, {"plannedDepartureTime": 1666338720000, "delayInMinutes": 0, "transportType": "UBAHN", "label": "U3", "destination": "F\u00c3\u00bcrstenried West", "cancelled": false, "occupancy": "LOW"}, {"plannedDepartureTime": 1666338720000, "delayInMinutes": 0, "transportType": "BUS", "label": "180", "destination": "Berduxstra\u00c3\u0178e via Westfriedhof U", "cancelled": false, "occupancy": "LOW"}, {"plannedDepartureTime": 1666339080000, "delayInMinutes": 3, "transportType": "UBAHN", "label": "U3", "destination": "Moosach", "cancelled": false, "occupancy": "LOW"}, {"plannedDepartureTime": 1666339320000, "delayInMinutes": 0, "transportType": "UBAHN", "label": "U3", "destination": "F\u00c3\u00bcrstenried West", "cancelled": false, "occupancy": "MEDIUM"}, {"plannedDepartureTime": 1666339440000, "delayInMinutes": 0, "transportType": "BUS", "label": "180", "destination": "Kieferngarten U", "cancelled": false, "occupancy": "LOW"}, {"plannedDepartureTime": 1666339500000, "transportType": "BUS", "label": "173", "destination": "Feldmoching Bf. U S", "cancelled": false, "occupancy": "LOW"}, {"plannedDepartureTime": 1666339500000, "delayInMinutes": 0, "transportType": "BUS", "label": "173", "destination": "Petuelring U", "cancelled": false, "occupancy": "LOW"}, {"plannedDepartureTime": 1666339680000, "delayInMinutes": 0, "transportType": "UBAHN", "label": "U3", "destination": "Moosach", "cancelled": false, "occupancy": "LOW"}, {"plannedDepartureTime": 1666339920000, "delayInMinutes": 0, "transportType": "UBAHN", "label": "U3", "destination": "F\u00c3\u00bcrstenried West", "cancelled": false, "occupancy": "MEDIUM"}, {"plannedDepartureTime": 1666339920000, "delayInMinutes": 0, "transportType": "BUS", "label": "180", "destination": "Berduxstra\u00c3\u0178e via Westfriedhof U", "cancelled": false, "occupancy": "LOW"}, {"plannedDepartureTime": 1666340280000, "delayInMinutes": 0, "transportType": "UBAHN", "label": "U3", "destination": "Moosach", "cancelled": false, "occupancy": "LOW"}]}}, {"Olympiapark Eissportstadion": {"transportTypes": ["BUS"], "trips": [{"plannedDepartureTime": 1666337820000, "delayInMinutes": -1, "transportType": "BUS", "label": "173", "destination": "Petuelring U", "cancelled": false, "occupancy": "LOW"}, {"plannedDepartureTime": 1666338180000, "delayInMinutes": 0, "transportType": "BUS", "label": "173", "destination": "Feldmoching Bf. U S", "cancelled": false, "occupancy": "LOW"}, {"plannedDepartureTime": 1666338420000, "transportType": "BUS", "label": "173", "destination": "Petuelring U", "cancelled": false, "occupancy": "LOW"}, {"plannedDepartureTime": 1666339380000, "transportType": "BUS", "label": "173", "destination": "Feldmoching Bf. U S", "cancelled": false, "occupancy": "LOW"}, {"plannedDepartureTime": 1666339620000, "delayInMinutes": 0, "transportType": "BUS", "label": "173", "destination": "Petuelring U", "cancelled": false, "occupancy": "LOW"}]}}]
+{
+  "entries": 3,
+  "stations": {
+    "Olympiazentrum": [
+      {
+        "plannedDepartureTime": 1669716120000,
+        "delayInMinutes": 0,
+        "realtimeDepartureTime": 1669716120000,
+        "transportType": "UBAHN",
+        "label": "U3",
+        "destination": "F\u00c3\u00bcrstenried West",
+        "times": [
+          {
+            "minutesTillDeparture": 1,
+            "onTime": true,
+            "cancelled": false
+          },
+          {
+            "minutesTillDeparture": 11,
+            "onTime": true,
+            "cancelled": false
+          }
+        ]
+      },
+      {
+        "plannedDepartureTime": 1669716240000,
+        "delayInMinutes": 0,
+        "realtimeDepartureTime": 1669716240000,
+        "transportType": "BUS",
+        "label": "180",
+        "destination": "Kieferngarten U",
+        "times": [
+          {
+            "minutesTillDeparture": 3,
+            "onTime": true,
+            "cancelled": false
+          }
+        ]
+      },
+      {
+        "plannedDepartureTime": 1669716300000,
+        "delayInMinutes": 0,
+        "realtimeDepartureTime": 1669716300000,
+        "transportType": "BUS",
+        "label": "173",
+        "destination": "Petuelring U",
+        "times": [
+          {
+            "minutesTillDeparture": 4,
+            "onTime": true,
+            "cancelled": false
+          }
+        ]
+      },
+      {
+        "plannedDepartureTime": 1669716300000,
+        "delayInMinutes": 0,
+        "realtimeDepartureTime": 1669716300000,
+        "transportType": "BUS",
+        "label": "173",
+        "destination": "Feldmoching Bf. U S",
+        "times": [
+          {
+            "minutesTillDeparture": 4,
+            "onTime": true,
+            "cancelled": false
+          }
+        ]
+      },
+      {
+        "plannedDepartureTime": 1669716480000,
+        "delayInMinutes": 2,
+        "realtimeDepartureTime": 1669716600000,
+        "transportType": "UBAHN",
+        "label": "U3",
+        "destination": "Moosach",
+        "times": [
+          {
+            "minutesTillDeparture": 9,
+            "onTime": false,
+            "cancelled": false
+          },
+          {
+            "minutesTillDeparture": 17,
+            "onTime": true,
+            "cancelled": false
+          }
+        ]
+      },
+      {
+        "plannedDepartureTime": 1669716720000,
+        "delayInMinutes": 0,
+        "realtimeDepartureTime": 1669716720000,
+        "transportType": "BUS",
+        "label": "180",
+        "destination": "Berduxstra\u00c3\u0178e via Westfriedhof U",
+        "times": [
+          {
+            "minutesTillDeparture": 11,
+            "onTime": true,
+            "cancelled": false
+          }
+        ]
+      }
+    ],
+    "Petuelring": [],
+    "Olympiapark Eissportstadion": []
+  }
+}
