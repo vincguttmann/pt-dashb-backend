@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="797da56e-349e-4289-bb05-fc5041b37335" name="Changes" comment="Json request url" />
+    <list default="true" id="797da56e-349e-4289-bb05-fc5041b37335" name="Changes" comment="finished json requests">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StationenAuslesen.py" beforeDir="false" afterPath="$PROJECT_DIR$/StationenAuslesen.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,7 +46,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3dc4fa76-7d95-431f-837a-71cae0a8b715" name="Changes" comment="" />
+      <changelist id="797da56e-349e-4289-bb05-fc5041b37335" name="Changes" comment="finished json requests" />
       <created>1666169443939</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -63,7 +66,21 @@
       <option name="project" value="LOCAL" />
       <updated>1666170550058</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="finished json requests">
+      <created>1668594367824</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668594367824</updated>
+    </task>
+    <task id="LOCAL-00004" summary="finished json requests">
+      <created>1668594391810</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1668594391810</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -117,6 +134,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test commit" />
     <MESSAGE value="Json request url" />
-    <option name="LAST_COMMIT_MESSAGE" value="Json request url" />
+    <MESSAGE value="finished json requests" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished json requests" />
   </component>
 </project>

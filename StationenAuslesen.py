@@ -5,7 +5,7 @@ from urllib.request import urlopen
 import json
 import urllib.request
 
-benoetigteStationen = ["Lueneburger Strasse", "Lerchenauer Strasse", "Curt-Mezger-Platz", "Milbertshofen", "Petuelring", "Anhalter Platz", "Olympiazentrum", "Oberwiesenfeld", "Olympiapark Eissportstadion", "Schopenhauerstrasse"]
+benoetigteStationen = ["Lueneburger Strasse", "Curt-Mezger-Platz", "Milbertshofen", "Petuelring", "Anhalter Platz", "Olympiazentrum"]
 zwischenSpeicher = []
 
 #CSV Datei öffnen
