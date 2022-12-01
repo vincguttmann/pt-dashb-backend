@@ -7,7 +7,7 @@ import datetime
 import math
 
 #testarray
-input = ["olympiazentrum.json", "petuelring.json", "olympiaparkEissportstadion.json"]
+input = ["Anhalter Platz.json", "Curt-Mezger-Platz.json","Milbertshofen.json","Lüneburger- Straße.json", "Olympiazentrum.json", "Petuelring.json"]
 def torZusammenfassung(inputFiles, outputFile, stationName):
     #inputfile: input
     #outputfile: output
@@ -162,4 +162,4 @@ def allStations(inputFiles, outputFile, stationName):
         outfile.write(json.dumps(output))
 
 
-allStations(input, "tor1.json", ["Olympiazentrum", "Petuelring", "Olympiapark Eissportstadion"])
+allStations(input, "yeet.json", ["Anhalter Platz", "Curt-Mezger-Platz","Milbertshofen","Lüneburger- Straße", "Olympiazentrum", "Petuelring"])
