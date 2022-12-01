@@ -33,55 +33,65 @@ Pendelbus = {
     }
 }
 # Daten der Werksbusse mit Schicht, Zeit und Station
-Werksbus = {
-    "Frühschicht": {
-        "Dostlerstraße": {
-            "station": "Dostlerstraße",
-            "time": "15:15"
-        },
-        "Riesenfeldstraße": {
-            "station": "Riesenfeldstraße",
-            "time": "15:15"
-        }
-    },
-    "Spätschicht": {
-        "Dostlerstraße": {
-            "start": "Dostlerstraße",
-            "time": "00:20"
-        },
-        "Riesenfeldstraße": {
-            "start": "Riesenfeldstraße",
-            "time": "00:20"
-        }
-    },
-    "Nachtschicht": {
-        "Dostlerstraße": {
-            "start": "Dostlerstraße",
-            "time": "06:10"
-        },
-        "Riesenfeldstraße": {
-            "start": "Riesenfeldstraße",
-            "time": "06:10"
-        }
-    },
-    "Normalschicht": {
-        "Dostlerstraße": {
-            "start": "Dostlerstraße",
-            "time": "15:35"
-        },
-        "Riesenfeldstraße": {
-            "start": "Riesenfeldstraße",
-            "time": "15:35"
-        }
-    }
-}
+# Werksbus = {
+#     "Frühschicht": {
+#         "Dostlerstraße": {
+#             "station": "Dostlerstraße",
+#             "time": "15:15"
+#         },
+#         "Riesenfeldstraße": {
+#             "station": "Riesenfeldstraße",
+#             "time": "15:15"
+#         }
+#     },
+#     "Spätschicht": {
+#         "Dostlerstraße": {
+#             "start": "Dostlerstraße",
+#             "time": "00:20"
+#         },
+#         "Riesenfeldstraße": {
+#             "start": "Riesenfeldstraße",
+#             "time": "00:20"
+#         }
+#     },
+#     "Nachtschicht": {
+#         "Dostlerstraße": {
+#             "start": "Dostlerstraße",
+#             "time": "06:10"
+#         },
+#         "Riesenfeldstraße": {
+#             "start": "Riesenfeldstraße",
+#             "time": "06:10"
+#         }
+#     },
+#     "Normalschicht": {
+#         "Dostlerstraße": {
+#             "start": "Dostlerstraße",
+#             "time": "15:35"
+#         },
+#         "Riesenfeldstraße": {
+#             "start": "Riesenfeldstraße",
+#             "time": "15:35"
+#         }
+#     }
+# }
 
 
 # Sucht alle Abfahrten in den nächten 3h raus
 # übergeben werden die Route(Format: %Start%Destination%ID) und die Station
-def getNextBus(self, thisStation):
+def getNextBus():
+    thisStation = "Dostlerstraße"
     now = datetime.now()
-    nextBus = []
+    dic1 = {"destination": "Freimann",
+          "transportType": "bmwbus",
+          "times": []}
+    dic2 = {"destination": "Taunusstraße",
+          "transportType": "bmwbus",
+          "times": []}
+    dic3 = {"destination": "FIZ/Projekthaus[3]",
+            "transportType": "bmwbus",
+            "times": []}
+    nextBus = [dic1, dic2, dic3]
 
     for route in Pendelbus:
         for station in Pendelbus[route]["stations"]:
@@ -92,36 +102,63 @@ def getNextBus(self, thisStation):
                 # Zeit bis zur Abfahrt berechnen
                 minDiff = ((hourBus - now.hour) * 60) + minBus - now.minute
 
-                if 0 < minDiff <= 180 and station == thisStation:
+                if hourBus == 17 and minBus == 20 and 0 < minDiff < 18:
                     cache = {
-                        "typ": "Pendelbus",
-                        "route": Pendelbus[route]["route"],
-                        "id": Pendelbus[route]["id"],
-                        "destination": Pendelbus[route]["destination"],
-                        "stopover": Pendelbus[route]["stopover"],
-                        "departure": minDiff
+                        #"route": 'Dostlerstraße - FIZ/Projekthaus[3]',
+                        #"id": 2,
+                        "destination": 'FIZ/Projekthaus[3]',
+                        #"stopover": 'ITZ',
+                        "minutesTillDeparture": minDiff,
+                        "onTime": True
                     }
-                    nextBus.append(cache)
+                    if cache["destination"] == "Freimann":
+                        nextBus[0]['times'].append(cache)
+                    elif cache["destination"] == "Taunusstraße":
+                        nextBus[1]['times'].append(cache)
+                    elif cache["destination"] == "FIZ/Projekthaus[3]":
+                        nextBus[2]['times'].append(cache)
 
-    for shift in Werksbus:
-        for station in Werksbus[shift]:
-            hourBus = datetime.strptime(Werksbus[shift][station]["time"], '%H:%M').hour
-            minBus = datetime.strptime(Werksbus[shift][station]["time"], '%H:%M').minute
+                elif 0 < minDiff <= 40 and station == thisStation:
+                    cache = {
+                        #"transportType": "bmwbus",
+                        #"route": Pendelbus[route]["route"],
+                        #"id": Pendelbus[route]["id"],
+                        "destination": Pendelbus[route]["destination"],
+                        #"stopover": Pendelbus[route]["stopover"],
+                        "minutesTillDeparture": minDiff,
+                        "onTime": True
+                    }
+                    if cache["destination"] == "Freimann":
+                        nextBus[0]['times'].append(cache)
+                    elif cache["destination"] == "Taunusstraße":
+                        nextBus[1]['times'].append(cache)
+                    elif cache["destination"] == "FIZ/Projekthaus[3]":
+                        nextBus[2]['times'].append(cache)
 
-            # Zeit bis zur Abfahrt berechnen
-            minDiff = ((hourBus - now.hour) * 60) + minBus - now.minute
 
-            if 0 < minDiff <= 180:
-                cache = {
-                    "typ": "Werksbus",
-                    "route": "",
-                    "id": 0,
-                    "destination": "",
-                    "stopover": "",
-                    "departure": minDiff
-                }
-                nextBus.append(cache)
+    # for shift in Werksbus:
+    #     for station in Werksbus[shift]:
+    #         hourBus = datetime.strptime(Werksbus[shift][station]["time"], '%H:%M').hour
+    #         minBus = datetime.strptime(Werksbus[shift][station]["time"], '%H:%M').minute
+    #
+    #         # Zeit bis zur Abfahrt berechnen
+    #         minDiff = ((hourBus - now.hour) * 60) + minBus - now.minute
+    #
+    #         if 0 < minDiff <= 60:
+    #             cache = {
+    #                 "typ": "Werksbus",
+    #                 "route": "",
+    #                 "id": 0,
+    #                 "destination": "",
+    #                 "stopover": "",
+    #                 "departure": minDiff
+    #             }
+    #             nextBus.append(cache)
 
-    nextBus = sorted(nextBus, key=lambda d: d['departure'])
-
+    #nextBus = sorted(nextBus, key=lambda d: d['departure'])
+    for i in range(len(nextBus)):
+        for j in range(len(nextBus[i]['times'])):
+            nextBus[i]['times'][j].pop("destination")
+        if len(nextBus[i]['times']) == 0:
+            nextBus.remove(nextBus[i])
     return nextBus
