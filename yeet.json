@@ -1,0 +1,33 @@
+{
+  "entries": 7,
+  "stations": {
+    "Anhalter Platz": [],
+    "Curt-Mezger-Platz": [],
+    "Milbertshofen": [],
+    "L\u00fcneburger Stra\u00dfe": [],
+    "Olympiazentrum": [],
+    "Petuelring": [],
+    "Pendelbusse": [
+      {
+        "destination": "Freimann",
+        "transportType": "bmwbus",
+        "times": [
+          {
+            "minutesTillDeparture": 11,
+            "onTime": true
+          }
+        ]
+      },
+      {
+        "destination": "Taunusstra\u00dfe",
+        "transportType": "bmwbus",
+        "times": [
+          {
+            "minutesTillDeparture": 31,
+            "onTime": true
+          }
+        ]
+      }
+    ]
+  }
+}

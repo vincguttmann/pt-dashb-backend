@@ -6,8 +6,41 @@ import json
 import datetime
 import math
 
+# Daten der Pendelbusse mit Linie, LinienID, Ziel, Zwischenhalten und Station mit deren Start und Abfahrtzeiten
+Pendelbus = {
+    "DF1": {
+        "stations": {
+            "Dostlerstraße": {
+                "start": "Dostlerstraße",
+                "times": ["07:40", "08:20", "09:00", "09:40", "10:20", "11:00", "11:40", "12:20", "13:00", "13:40",
+                          "14:20", "15:00", "15:40", "16:20", "17:00"]
+            },
+            "Riesenfeldstraße": {
+                "start": "Riesenfeldstraße",
+                "times": ["07:42", "08:22", "09:02", "09:42", "10:22", "11:02", "11:42", "12:22", "13:02", "13:42",
+                          "14:22", "15:02", "15:42", "16:22", "17:02"]
+            }},
+        "route": "Dostlerstraße - Freimann ",
+        "id": 1,
+        "destination": "Freimann",
+        "stopover": "ITZ/FIZ"
+    },
+    "DT2": {
+        "stations": {
+            "Dostlerstraße": {
+                "start": "Dostlerstraße",
+                "times": ["08:00", "08:40", "09:20", "10:00", "10:40", "11:20", "12:00", "12:40", "13:20", "14:00",
+                          "14:40", "15:20", "16:00", "16:40", "17:20"]
+            }},
+        "route": "Dostlerstraße - Taunusstraße",
+        "id": 2,
+        "destination": "Taunusstraße",
+        "stopover": "ITZ/FIZ"
+    }
+}
+
 #testarray
-input = ["Anhalter Platz.json", "Curt-Mezger-Platz.json","Milbertshofen.json","Lüneburger- Straße.json", "Olympiazentrum.json", "Petuelring.json"]
+input = ["Anhalter Platz.json", "Curt-Mezger-Platz.json","Milbertshofen.json","Lüneburger Straße.json", "Olympiazentrum.json", "Petuelring.json"]
 def torZusammenfassung(inputFiles, outputFile, stationName):
     #inputfile: input
     #outputfile: output
@@ -157,9 +190,145 @@ def allStations(inputFiles, outputFile, stationName):
     for i in range(len(stationName)):
         output["stations"][stationName[i]] = nextDepartures[i]
 
+    output["stations"]["Pendelbusse"] = getNextBus()
+    output["entries"] += 1
+
     # output ausgeben in File
     with open(outputFile, "w") as outfile:
         outfile.write(json.dumps(output))
 
 
-allStations(input, "yeet.json", ["Anhalter Platz", "Curt-Mezger-Platz","Milbertshofen","Lüneburger- Straße", "Olympiazentrum", "Petuelring"])
+# Daten der Werksbusse mit Schicht, Zeit und Station
+# Werksbus = {
+#     "Frühschicht": {
+#         "Dostlerstraße": {
+#             "station": "Dostlerstraße",
+#             "time": "15:15"
+#         },
+#         "Riesenfeldstraße": {
+#             "station": "Riesenfeldstraße",
+#             "time": "15:15"
+#         }
+#     },
+#     "Spätschicht": {
+#         "Dostlerstraße": {
+#             "start": "Dostlerstraße",
+#             "time": "00:20"
+#         },
+#         "Riesenfeldstraße": {
+#             "start": "Riesenfeldstraße",
+#             "time": "00:20"
+#         }
+#     },
+#     "Nachtschicht": {
+#         "Dostlerstraße": {
+#             "start": "Dostlerstraße",
+#             "time": "06:10"
+#         },
+#         "Riesenfeldstraße": {
+#             "start": "Riesenfeldstraße",
+#             "time": "06:10"
+#         }
+#     },
+#     "Normalschicht": {
+#         "Dostlerstraße": {
+#             "start": "Dostlerstraße",
+#             "time": "15:35"
+#         },
+#         "Riesenfeldstraße": {
+#             "start": "Riesenfeldstraße",
+#             "time": "15:35"
+#         }
+#     }
+# }
+
+
+# Sucht alle Abfahrten in den nächten 3h raus
+# übergeben werden die Route(Format: %Start%Destination%ID) und die Station
+def getNextBus():
+    thisStation = "Dostlerstraße"
+    now = datetime.datetime.now()
+    dic1 = {"destination": "Freimann",
+          "transportType": "bmwbus",
+          "times": []}
+    dic2 = {"destination": "Taunusstraße",
+          "transportType": "bmwbus",
+          "times": []}
+    dic3 = {"destination": "FIZ/Projekthaus[3]",
+            "transportType": "bmwbus",
+            "times": []}
+    nextBus = [dic1, dic2, dic3]
+
+    for route in Pendelbus:
+        for station in Pendelbus[route]["stations"]:
+            for time in Pendelbus[route]["stations"][station]["times"]:
+                hourBus = datetime.datetime.strptime(time, '%H:%M').hour
+                minBus = datetime.datetime.strptime(time, '%H:%M').minute
+
+                # Zeit bis zur Abfahrt berechnen
+                minDiff = ((hourBus - now.hour) * 60) + minBus - now.minute
+
+                if hourBus == 17 and minBus == 20 and 0 < minDiff < 18:
+                    cache = {
+                        #"route": 'Dostlerstraße - FIZ/Projekthaus[3]',
+                        #"id": 2,
+                        "destination": 'FIZ/Projekthaus[3]',
+                        #"stopover": 'ITZ',
+                        "minutesTillDeparture": minDiff,
+                        "onTime": True
+                    }
+                    if cache["destination"] == "Freimann":
+                        nextBus[0]['times'].append(cache)
+                    elif cache["destination"] == "Taunusstraße":
+                        nextBus[1]['times'].append(cache)
+                    elif cache["destination"] == "FIZ/Projekthaus[3]":
+                        nextBus[2]['times'].append(cache)
+
+                elif 0 < minDiff <= 40 and station == thisStation:
+                    cache = {
+                        #"transportType": "bmwbus",
+                        #"route": Pendelbus[route]["route"],
+                        #"id": Pendelbus[route]["id"],
+                        "destination": Pendelbus[route]["destination"],
+                        #"stopover": Pendelbus[route]["stopover"],
+                        "minutesTillDeparture": minDiff,
+                        "onTime": True
+                    }
+                    if cache["destination"] == "Freimann":
+                        nextBus[0]['times'].append(cache)
+                    elif cache["destination"] == "Taunusstraße":
+                        nextBus[1]['times'].append(cache)
+                    elif cache["destination"] == "FIZ/Projekthaus[3]":
+                        nextBus[2]['times'].append(cache)
+
+
+    # for shift in Werksbus:
+    #     for station in Werksbus[shift]:
+    #         hourBus = datetime.strptime(Werksbus[shift][station]["time"], '%H:%M').hour
+    #         minBus = datetime.strptime(Werksbus[shift][station]["time"], '%H:%M').minute
+    #
+    #         # Zeit bis zur Abfahrt berechnen
+    #         minDiff = ((hourBus - now.hour) * 60) + minBus - now.minute
+    #
+    #         if 0 < minDiff <= 60:
+    #             cache = {
+    #                 "typ": "Werksbus",
+    #                 "route": "",
+    #                 "id": 0,
+    #                 "destination": "",
+    #                 "stopover": "",
+    #                 "departure": minDiff
+    #             }
+    #             nextBus.append(cache)
+
+    #nextBus = sorted(nextBus, key=lambda d: d['departure'])
+    for i in range(len(nextBus)):
+        for j in range(len(nextBus[i]['times'])):
+            nextBus[i]['times'][j].pop("destination")
+        if len(nextBus[i]['times']) == 0:
+            nextBus.remove(nextBus[i])
+    return nextBus
+
+
+
+allStations(input, "yeet.json", ["Anhalter Platz", "Curt-Mezger-Platz","Milbertshofen","Lüneburger Straße", "Olympiazentrum", "Petuelring"])
