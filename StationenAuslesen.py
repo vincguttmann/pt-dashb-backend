@@ -228,6 +228,7 @@ def getNextBus():
                         nextBus[1]['times'].append(cache)
                     elif cache["destination"] == "FIZ/Projekthaus[3]":
                         nextBus[2]['times'].append(cache)
+    nextBus.reverse()
 
 
     #nextBus = sorted(nextBus, key=lambda d: d['departure'])

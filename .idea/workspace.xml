@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="797da56e-349e-4289-bb05-fc5041b37335" name="Changes" comment="Abschneiden von &quot;U&quot; am Ende" />
+    <list default="true" id="797da56e-349e-4289-bb05-fc5041b37335" name="Changes" comment="Reihenfolge der Stationen geändert" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -147,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670408885678</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Reihenfolge der Stationen geändert">
+      <created>1670409245310</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1670409245310</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -211,6 +218,7 @@
     <MESSAGE value="typo fix2" />
     <MESSAGE value="Abschneiden nach &quot;Bf.&quot; in &quot;destination&quot;" />
     <MESSAGE value="Abschneiden von &quot;U&quot; am Ende" />
-    <option name="LAST_COMMIT_MESSAGE" value="Abschneiden von &quot;U&quot; am Ende" />
+    <MESSAGE value="Reihenfolge der Stationen geändert" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reihenfolge der Stationen geändert" />
   </component>
 </project>
