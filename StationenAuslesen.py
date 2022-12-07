@@ -72,84 +72,6 @@ Pendelbus = {
     }
 }
 
-#testarray
-input = ["Anhalter Platz.json", "Curt-Mezger-Platz.json","Milbertshofen.json","Lüneburger Straße.json", "Olympiazentrum.json", "Petuelring.json"]
-def torZusammenfassung(inputFiles, outputFile, stationName):
-    #inputfile: input
-    #outputfile: output
-    #stationname. namen der Stationen
-    f = [] #zwischenspeicher
-    data = [] #
-
-    # data array wird mit inputfiles gefüllt
-    for i in range(len(inputFiles)):
-        with open(inputFiles[i]) as file:
-            data.append(json.load(file))
-
-    nextDeparturesStation = []
-    nextDepartures = []
-
-    # j = station
-    # i = index fahrt
-    # rechnet aus ob es innerhalb der nächsten 20 minuten ist
-    # unwichtige Daten raushauen
-    for j in range(len(data)):
-        for i in range(len(data[j])):
-            if data[j][i]["realtime"] is True:
-                if data[j][i]["plannedDepartureTime"] / 1000 + data[j][i]["delayInMinutes"] * 60 - datetime.datetime.now().timestamp() <= 1200:
-                    data[j][i].pop("sev")
-                    data[j][i].pop("network")
-                    data[j][i].pop("stopPointGlobalId")
-                    data[j][i].pop("bannerHash")
-                    data[j][i].pop("messages")
-                    data[j][i].pop("platform", None)
-                    data[j][i].pop("realtime")
-                    data[j][i].pop("trainType")
-                    data[j][i]["minutesTillDeparture"] = (data[j][i]["plannedDepartureTime"] - datetime.datetime.now().timestamp()) / 1000 / 60 + data[j][i]["delayInMinutes"]
-                    nextDeparturesStation.append(data[j][i])
-
-            elif data[j][i]["plannedDepartureTime"] / 1000 - datetime.datetime.now().timestamp() <= 1200:
-                data[j][i].pop("sev")
-                data[j][i].pop("network")
-                data[j][i].pop("stopPointGlobalId")
-                data[j][i].pop("bannerHash")
-                data[j][i].pop("messages")
-                data[j][i].pop("platform", None)
-                data[j][i].pop("realtime")
-                data[j][i].pop("trainType")
-                nextDeparturesStation.append(data[j][i])
-        nextDepartures.append(nextDeparturesStation.copy())
-        del nextDeparturesStation[:]
-
-    transportTypes = []
-    transportTypesStation = []
-
-    # schaut welchen Transporttyp es gibt
-    # erstellt einen Array für jede Station
-    for k in range(len(nextDepartures)):
-        for i in range(len(nextDepartures[k])):
-            double = False
-            for j in range(len(transportTypesStation)):
-                if nextDepartures[k][i]["transportType"] == transportTypesStation[j]:
-                    double = True
-            if double is False:
-                transportTypesStation.append(nextDepartures[k][i]["transportType"])
-        transportTypes.append(transportTypesStation.copy())
-        del transportTypesStation[:]
-
-    output = []
-
-    # output wird erstellt
-    # output ist Liste mit wichtigen Daten, die ausgegeben werden
-    for i in range(len(stationName)):
-        output.append({stationName[i]: {
-            "transportTypes": transportTypes[i],
-            "trips": nextDepartures[i]}})
-
-    # output ausgeben in File
-    with open(outputFile, "w") as outfile:
-        outfile.write(json.dumps(output))
-
 def allStations(inputFiles, outputFile, stationName):
     #inputfile: input
     #outputfile: output
@@ -159,7 +81,7 @@ def allStations(inputFiles, outputFile, stationName):
 
     # data array wird mit inputfiles gefüllt
     for i in range(len(inputFiles)):
-        with open(inputFiles[i]) as file:
+        with open(inputFiles[i], encoding='utf8') as file:
             data.append(json.load(file))
 
     nextDeparturesStation = []
@@ -167,12 +89,12 @@ def allStations(inputFiles, outputFile, stationName):
 
     # j = station
     # i = index fahrt
-    # rechnet aus ob es innerhalb der nächsten 20 minuten ist
+    # rechnet aus ob es innerhalb der nächsten 30 Minuten ist
     # unwichtige Daten raushauen
     for j in range(len(data)):
         for i in range(len(data[j])):
             if data[j][i]["realtime"] is True:
-                if data[j][i]["plannedDepartureTime"] / 1000 + data[j][i]["delayInMinutes"] * 60 - datetime.datetime.now().timestamp() <= 1200 and data[j][i]["plannedDepartureTime"] / 1000 + data[j][i]["delayInMinutes"] * 60 - datetime.datetime.now().timestamp() > 0:
+                if data[j][i]["plannedDepartureTime"] / 1000 + data[j][i]["delayInMinutes"] * 60 - datetime.datetime.now().timestamp() <= 1800 and data[j][i]["plannedDepartureTime"] / 1000 + data[j][i]["delayInMinutes"] * 60 - datetime.datetime.now().timestamp() > 0 and data[j][i]["cancelled"] is False:
                     data[j][i].pop("sev")
                     data[j][i].pop("network")
                     data[j][i].pop("stopPointGlobalId")
@@ -194,7 +116,7 @@ def allStations(inputFiles, outputFile, stationName):
                     if boo is False:
                         nextDeparturesStation.append(data[j][i])
 
-            elif data[j][i]["plannedDepartureTime"] / 1000 - datetime.datetime.now().timestamp() <= 1200 and data[j][i]["plannedDepartureTime"] / 1000 - datetime.datetime.now().timestamp() > 0:
+            elif data[j][i]["plannedDepartureTime"] / 1000 - datetime.datetime.now().timestamp() <= 1800 and data[j][i]["plannedDepartureTime"] / 1000 - datetime.datetime.now().timestamp() > 0 and data[j][i]["cancelled"] is False:
                 data[j][i].pop("sev")
                 data[j][i].pop("network")
                 data[j][i].pop("stopPointGlobalId")
@@ -227,53 +149,8 @@ def allStations(inputFiles, outputFile, stationName):
     output["entries"] += 1
 
     # output ausgeben in File
-    with open(outputFile, "w") as outfile:
-        outfile.write(json.dumps(output))
-
-
-# Daten der Werksbusse mit Schicht, Zeit und Station
-# Werksbus = {
-#     "Frühschicht": {
-#         "Dostlerstraße": {
-#             "station": "Dostlerstraße",
-#             "time": "15:15"
-#         },
-#         "Riesenfeldstraße": {
-#             "station": "Riesenfeldstraße",
-#             "time": "15:15"
-#         }
-#     },
-#     "Spätschicht": {
-#         "Dostlerstraße": {
-#             "start": "Dostlerstraße",
-#             "time": "00:20"
-#         },
-#         "Riesenfeldstraße": {
-#             "start": "Riesenfeldstraße",
-#             "time": "00:20"
-#         }
-#     },
-#     "Nachtschicht": {
-#         "Dostlerstraße": {
-#             "start": "Dostlerstraße",
-#             "time": "06:10"
-#         },
-#         "Riesenfeldstraße": {
-#             "start": "Riesenfeldstraße",
-#             "time": "06:10"
-#         }
-#     },
-#     "Normalschicht": {
-#         "Dostlerstraße": {
-#             "start": "Dostlerstraße",
-#             "time": "15:35"
-#         },
-#         "Riesenfeldstraße": {
-#             "start": "Riesenfeldstraße",
-#             "time": "15:35"
-#         }
-#     }
-# }
+    with open(outputFile, "w", encoding='utf8') as outfile:
+        outfile.write(json.dumps(output, ensure_ascii=False))
 
 
 # Sucht alle Abfahrten in den nächten 3h raus
@@ -335,25 +212,6 @@ def getNextBus():
                         nextBus[2]['times'].append(cache)
 
 
-    # for shift in Werksbus:
-    #     for station in Werksbus[shift]:
-    #         hourBus = datetime.strptime(Werksbus[shift][station]["time"], '%H:%M').hour
-    #         minBus = datetime.strptime(Werksbus[shift][station]["time"], '%H:%M').minute
-    #
-    #         # Zeit bis zur Abfahrt berechnen
-    #         minDiff = ((hourBus - now.hour) * 60) + minBus - now.minute
-    #
-    #         if 0 < minDiff <= 60:
-    #             cache = {
-    #                 "typ": "Werksbus",
-    #                 "route": "",
-    #                 "id": 0,
-    #                 "destination": "",
-    #                 "stopover": "",
-    #                 "departure": minDiff
-    #             }
-    #             nextBus.append(cache)
-
     #nextBus = sorted(nextBus, key=lambda d: d['departure'])
     for i in range(len(nextBus)):
         for j in range(len(nextBus[i]['times'])):
@@ -364,4 +222,4 @@ def getNextBus():
 
 
 
-allStations(input, "yeet.json", ["Anhalter Platz", "Curt-Mezger-Platz","Milbertshofen","Lüneburger Straße", "Olympiazentrum", "Petuelring"])
+allStations(["Anhalter Platz.json", "Curt-Mezger-Platz.json","Milbertshofen.json","Lueneburger Strasse.json", "Olympiazentrum.json", "Petuelring.json"], "yeet.json", ["Anhalter Platz", "Curt-Mezger-Platz","Milbertshofen","Lüneburger Straße", "Olympiazentrum", "Petuelring"])
