@@ -37,9 +37,9 @@ for i in range(len(data)):
     with open(benoetigteStationen[i] + ".json", "w") as outfile:
         outfile.write(json.dumps(data[i]))
 
-# Output: JSON Dateien von jeder Station die wir brauchen
+#Output: JSON Dateien von jeder Station die wir brauchen
 
-# Daten der Pendelbusse mit Linie, LinienID, Ziel, Zwischenhalten und Station mit deren Start und Abfahrtzeiten
+#Daten der Pendelbusse mit Linie, LinienID, Ziel, Zwischenhalten und Station mit deren Start und Abfahrtzeiten
 Pendelbus = {
     "DF1": {
         "stations": {
@@ -230,12 +230,13 @@ def getNextBus():
                         nextBus[2]['times'].append(cache)
 
 
-    nextBus = sorted(nextBus, key=lambda d: d['times'][0])
     for i in range(len(nextBus)):
         for j in range(len(nextBus[i]['times'])):
             nextBus[i]['times'][j].pop("destination")
         if len(nextBus[i]['times']) == 0:
             nextBus.remove(nextBus[i])
+    if nextBus[0]['times'][0]['minutesTillDeparture'] > nextBus[1]['times'][0]['minutesTillDeparture']:
+        nextBus.reverse()
     return nextBus
 
 
