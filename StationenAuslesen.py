@@ -230,7 +230,7 @@ def getNextBus():
                         nextBus[2]['times'].append(cache)
 
 
-    nextBus = sorted(nextBus, key=lambda d: d['times'])
+    nextBus = sorted(nextBus, key=lambda d: d['times'][0])
     for i in range(len(nextBus)):
         for j in range(len(nextBus[i]['times'])):
             nextBus[i]['times'][j].pop("destination")
