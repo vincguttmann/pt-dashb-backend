@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="797da56e-349e-4289-bb05-fc5041b37335" name="Changes" comment="Backend endgültig fertig">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Anhalter Platz.json" beforeDir="false" afterPath="$PROJECT_DIR$/Anhalter Platz.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Curt-Mezger-Platz.json" beforeDir="false" afterPath="$PROJECT_DIR$/Curt-Mezger-Platz.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lueneburger Strasse.json" beforeDir="false" afterPath="$PROJECT_DIR$/Lueneburger Strasse.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Milbertshofen.json" beforeDir="false" afterPath="$PROJECT_DIR$/Milbertshofen.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Olympiazentrum.json" beforeDir="false" afterPath="$PROJECT_DIR$/Olympiazentrum.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Petuelring.json" beforeDir="false" afterPath="$PROJECT_DIR$/Petuelring.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StationenAuslesen.py" beforeDir="false" afterPath="$PROJECT_DIR$/StationenAuslesen.py" afterDir="false" />
-    </list>
+    <list default="true" id="797da56e-349e-4289-bb05-fc5041b37335" name="Changes" comment="Backend endgültig fertig 2.0" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -100,7 +91,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670398340735</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Backend endgültig fertig 2.0">
+      <created>1670399927775</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1670399927775</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -157,6 +155,7 @@
     <MESSAGE value="finished json requests" />
     <MESSAGE value="finished backend" />
     <MESSAGE value="Backend endgültig fertig" />
-    <option name="LAST_COMMIT_MESSAGE" value="Backend endgültig fertig" />
+    <MESSAGE value="Backend endgültig fertig 2.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Backend endgültig fertig 2.0" />
   </component>
 </project>
