@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="797da56e-349e-4289-bb05-fc5041b37335" name="Changes" comment="finished json requests">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StationenAuslesen.py" beforeDir="false" afterPath="$PROJECT_DIR$/StationenAuslesen.py" afterDir="false" />
-    </list>
+    <list default="true" id="797da56e-349e-4289-bb05-fc5041b37335" name="Changes" comment="finished backend" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,7 +10,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="1776c68f4403c9d35198bf84cd874ef4a59514e2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -80,7 +77,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668594391810</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="finished backend">
+      <created>1670397235656</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1670397235656</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -94,7 +98,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/Read" />
+                        <option value="Lukas" />
                       </list>
                     </value>
                   </entry>
@@ -135,6 +139,7 @@
     <MESSAGE value="test commit" />
     <MESSAGE value="Json request url" />
     <MESSAGE value="finished json requests" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished json requests" />
+    <MESSAGE value="finished backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished backend" />
   </component>
 </project>
