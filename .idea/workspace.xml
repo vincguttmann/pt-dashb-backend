@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="797da56e-349e-4289-bb05-fc5041b37335" name="Changes" comment="finished backend" />
+    <list default="true" id="797da56e-349e-4289-bb05-fc5041b37335" name="Changes" comment="Backend endgültig fertig">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Anhalter Platz.json" beforeDir="false" afterPath="$PROJECT_DIR$/Anhalter Platz.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curt-Mezger-Platz.json" beforeDir="false" afterPath="$PROJECT_DIR$/Curt-Mezger-Platz.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lueneburger Strasse.json" beforeDir="false" afterPath="$PROJECT_DIR$/Lueneburger Strasse.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Milbertshofen.json" beforeDir="false" afterPath="$PROJECT_DIR$/Milbertshofen.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Olympiazentrum.json" beforeDir="false" afterPath="$PROJECT_DIR$/Olympiazentrum.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Petuelring.json" beforeDir="false" afterPath="$PROJECT_DIR$/Petuelring.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StationenAuslesen.py" beforeDir="false" afterPath="$PROJECT_DIR$/StationenAuslesen.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,7 +19,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="1776c68f4403c9d35198bf84cd874ef4a59514e2" />
+        <entry key="$PROJECT_DIR$" value="cd139dad1ddf5569026782427efded64be449f44" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -19,7 +28,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2GLYggxeijDrfEIoktAIJ6O4JVu" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="false" id="Update" />
   </component>
   <component name="ProjectViewState">
@@ -84,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670397235656</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Backend endgültig fertig">
+      <created>1670398340735</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1670398340735</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -140,6 +156,7 @@
     <MESSAGE value="Json request url" />
     <MESSAGE value="finished json requests" />
     <MESSAGE value="finished backend" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished backend" />
+    <MESSAGE value="Backend endgültig fertig" />
+    <option name="LAST_COMMIT_MESSAGE" value="Backend endgültig fertig" />
   </component>
 </project>

@@ -4,11 +4,11 @@ import json
 import datetime
 import math
 
-benoetigteStationen = ["Lueneburger Strasse", "Curt-Mezger-Platz", "Milbertshofen", "Petuelring", "Anhalter Platz", "Olympiazentrum"]
+benoetigteStationen = ["Curt-Mezger-Platz", "Anhalter Platz", "Lueneburger Strasse", "Petuelring", "Olympiazentrum", "Milbertshofen"]
 zwischenSpeicher = []
 
 #CSV Datei öffnen
-with open('../MVV_Stationen_2.csv') as csvdatei:
+with open('MVV_Stationen_2.csv') as csvdatei:
     #fieldnames = ['HstNummer','Name mit Ort','Name ohne Ort','Ort','GKZ','Globale ID','MVTT X','MVTT Y','WGS84 X','WGS84 Y']
     csv_reader_object = csv.reader(csvdatei)
 
