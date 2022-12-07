@@ -108,7 +108,7 @@ def allStations(inputFiles, outputFile, stationName):
                     if data[j][i]["delayInMinutes"] > 0:
                         data[j][i]["times"][0]["onTime"] = False
                     if "Expressbus" in data[j][i]["destination"]:
-                        data[j][i]["destination"] = data[j][i]["destination"].split("Expressbus ")[0]
+                        data[j][i]["destination"] = data[j][i]["destination"].split("Expressbus ")[1]
                     if " via" in data[j][i]["destination"]:
                         data[j][i]["destination"] = data[j][i]["destination"].split(" via")[0]
 
@@ -133,7 +133,7 @@ def allStations(inputFiles, outputFile, stationName):
                 data[j][i].pop("occupancy")
                 data[j][i]["times"] = [{"minutesTillDeparture": math.ceil((data[j][i]["plannedDepartureTime"] / 1000 - datetime.datetime.now().timestamp()) / 60), "onTime": True, "cancelled": data[j][i].pop("cancelled")}]
                 if "Expressbus" in data[j][i]["destination"]:
-                    data[j][i]["destination"] = data[j][i]["destination"].split("Expressbus ")[0]
+                    data[j][i]["destination"] = data[j][i]["destination"].split("Expressbus ")[1]
                 if " via" in data[j][i]["destination"]:
                     data[j][i]["destination"] = data[j][i]["destination"].split(" via")[0]
 
