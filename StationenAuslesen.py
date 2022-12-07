@@ -112,7 +112,9 @@ def allStations(inputFiles, outputFile, stationName):
                     if " via" in data[j][i]["destination"]:
                         data[j][i]["destination"] = data[j][i]["destination"].split(" via")[0]
                     if "Bf." in data[j][i]["destination"]:
-                        data[j][i]["destination"] = data[j][i]["destination"].split("Bf.")[0] + 'Bf.'
+                        data[j][i]["destination"] = data[j][i]["destination"].split("Bf.")[0]
+                    if data[j][i]["destination"][len(data[j][i]["destination"]) -1] == 'U':
+                        data[j][i]["destination"] = data[j][i]["destination"][:len(data[j][i]["destination"]) - 1]
 
                     boo = False
                     for k in range(len(nextDeparturesStation)):
@@ -139,7 +141,9 @@ def allStations(inputFiles, outputFile, stationName):
                 if " via" in data[j][i]["destination"]:
                     data[j][i]["destination"] = data[j][i]["destination"].split(" via")[0]
                 if "Bf." in data[j][i]["destination"]:
-                    data[j][i]["destination"] = data[j][i]["destination"].split("Bf.")[0] + 'Bf.'
+                    data[j][i]["destination"] = data[j][i]["destination"].split("Bf.")[0]
+                if data[j][i]["destination"][len(data[j][i]["destination"]) - 1] == 'U':
+                    data[j][i]["destination"] = data[j][i]["destination"][:len(data[j][i]["destination"]) - 1]
 
                 boo = False
                 for k in range(len(nextDeparturesStation)):
