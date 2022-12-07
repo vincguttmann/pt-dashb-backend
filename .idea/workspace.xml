@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="797da56e-349e-4289-bb05-fc5041b37335" name="Changes" comment="pfad verändert" />
+    <list default="true" id="797da56e-349e-4289-bb05-fc5041b37335" name="Changes" comment="Abschneiden von &quot;U&quot; am Ende" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -119,7 +119,35 @@
       <option name="project" value="LOCAL" />
       <updated>1670407902981</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="typo fix">
+      <created>1670408313105</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1670408313105</updated>
+    </task>
+    <task id="LOCAL-00012" summary="typo fix2">
+      <created>1670408407061</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1670408407061</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Abschneiden nach &quot;Bf.&quot; in &quot;destination&quot;">
+      <created>1670408615786</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1670408615786</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Abschneiden von &quot;U&quot; am Ende">
+      <created>1670408885678</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1670408885678</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -179,6 +207,10 @@
     <MESSAGE value="Backend endgültig fertig 2.0" />
     <MESSAGE value="&quot;Expressbus&quot; und &quot;via&quot; aus destination entfernt,&#10;Anzahl der Zeiten auf 3 limitiert" />
     <MESSAGE value="pfad verändert" />
-    <option name="LAST_COMMIT_MESSAGE" value="pfad verändert" />
+    <MESSAGE value="typo fix" />
+    <MESSAGE value="typo fix2" />
+    <MESSAGE value="Abschneiden nach &quot;Bf.&quot; in &quot;destination&quot;" />
+    <MESSAGE value="Abschneiden von &quot;U&quot; am Ende" />
+    <option name="LAST_COMMIT_MESSAGE" value="Abschneiden von &quot;U&quot; am Ende" />
   </component>
 </project>
