@@ -107,11 +107,16 @@ def allStations(inputFiles, outputFile, stationName):
                     data[j][i]["times"] = [{"minutesTillDeparture": math.ceil((data[j][i]["plannedDepartureTime"] / 1000 - datetime.datetime.now().timestamp()) / 60 + data[j][i]["delayInMinutes"]), "onTime": True, "cancelled": data[j][i].pop("cancelled")}]
                     if data[j][i]["delayInMinutes"] > 0:
                         data[j][i]["times"][0]["onTime"] = False
+                    if "Expressbus" in data[j][i]["destination"]:
+                        data[j][i]["destination"] = data[j][i]["destination"].split("Expressbusss")[1]
+                    if " via" in data[j][i]["destination"]:
+                        data[j][i]["destination"] = data[j][i]["destination"].split(" via")[0]
 
                     boo = False
                     for k in range(len(nextDeparturesStation)):
                         if nextDeparturesStation[k]["label"] == data[j][i]["label"] and nextDeparturesStation[k]["destination"] == data[j][i]["destination"]:
-                            nextDeparturesStation[k]["times"].append(data[j][i]["times"][0])
+                            if len(nextDeparturesStation[k]["times"]) < 3:
+                                nextDeparturesStation[k]["times"].append(data[j][i]["times"][0])
                             boo = True
                     if boo is False:
                         nextDeparturesStation.append(data[j][i])
@@ -127,11 +132,16 @@ def allStations(inputFiles, outputFile, stationName):
                 data[j][i].pop("trainType")
                 data[j][i].pop("occupancy")
                 data[j][i]["times"] = [{"minutesTillDeparture": math.ceil((data[j][i]["plannedDepartureTime"] / 1000 - datetime.datetime.now().timestamp()) / 60), "onTime": True, "cancelled": data[j][i].pop("cancelled")}]
+                if "Expressbus" in data[j][i]["destination"]:
+                    data[j][i]["destination"] = data[j][i]["destination"].split("Expressbusss")[1]
+                if " via" in data[j][i]["destination"]:
+                    data[j][i]["destination"] = data[j][i]["destination"].split(" via")[0]
 
                 boo = False
                 for k in range(len(nextDeparturesStation)):
                     if nextDeparturesStation[k]["label"] == data[j][i]["label"] and nextDeparturesStation[k]["destination"] == data[j][i]["destination"]:
-                        nextDeparturesStation[k]["times"].append(data[j][i]["times"][0])
+                        if len(nextDeparturesStation[k]["times"]) < 3:
+                            nextDeparturesStation[k]["times"].append(data[j][i]["times"][0])
                         boo = True
                 if boo is False:
                     nextDeparturesStation.append(data[j][i])
