@@ -111,6 +111,8 @@ def allStations(inputFiles, outputFile, stationName):
                         data[j][i]["destination"] = data[j][i]["destination"].split("Expressbus ")[1]
                     if " via" in data[j][i]["destination"]:
                         data[j][i]["destination"] = data[j][i]["destination"].split(" via")[0]
+                    if "Bf." in data[j][i]["destination"]:
+                        data[j][i]["destination"] = data[j][i]["destination"].split("Bf.")[0] + 'Bf.'
 
                     boo = False
                     for k in range(len(nextDeparturesStation)):
@@ -136,6 +138,8 @@ def allStations(inputFiles, outputFile, stationName):
                     data[j][i]["destination"] = data[j][i]["destination"].split("Expressbus ")[1]
                 if " via" in data[j][i]["destination"]:
                     data[j][i]["destination"] = data[j][i]["destination"].split(" via")[0]
+                if "Bf." in data[j][i]["destination"]:
+                    data[j][i]["destination"] = data[j][i]["destination"].split("Bf.")[0] + 'Bf.'
 
                 boo = False
                 for k in range(len(nextDeparturesStation)):
