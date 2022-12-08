@@ -21,7 +21,7 @@ with open('MVV_Stationen_2.csv') as csvdatei:
 # Link:https://www.mvg.de/api/fib/v1/departure?globalId=de:09162:350&limit=10&offsetInMinutes=0&transportTypes=UBAHN,BUS,SBAHN,SCHIFF
 
 #url welche mit Slicing bearbeitet wird
-url = "https://www.mvg.de/api/fib/v1/departure?globalId=-&limit=10&offsetInMinutes=0&transportTypes=UBAHN,BUS,SBAHN,SCHIFF"
+url = "https://www.mvg.de/api/fib/v1/departure?globalId=-&limit=21&offsetInMinutes=0&transportTypes=UBAHN,BUS,SBAHN,SCHIFF"
 data = []
 
 for i in range(len(zwischenSpeicher)):

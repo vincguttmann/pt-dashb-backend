@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="797da56e-349e-4289-bb05-fc5041b37335" name="Changes" comment="Reihenfolge der Pendelbusse geändert">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="797da56e-349e-4289-bb05-fc5041b37335" name="Changes" comment="Curt-Mezger-Platz abgekürzt" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -184,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670415263973</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Curt-Mezger-Platz abgekürzt">
+      <created>1670482031493</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1670482031493</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -250,6 +255,7 @@
     <MESSAGE value="Abschneiden von &quot;U&quot; am Ende" />
     <MESSAGE value="Reihenfolge der Stationen geändert" />
     <MESSAGE value="Reihenfolge der Pendelbusse geändert" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reihenfolge der Pendelbusse geändert" />
+    <MESSAGE value="Curt-Mezger-Platz abgekürzt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Curt-Mezger-Platz abgekürzt" />
   </component>
 </project>
