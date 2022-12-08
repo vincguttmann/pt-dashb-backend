@@ -94,7 +94,7 @@ def allStations(inputFiles, outputFile, stationName):
     for j in range(len(data)):
         for i in range(len(data[j])):
             if data[j][i]["realtime"] is True:
-                if data[j][i]["plannedDepartureTime"] / 1000 + data[j][i]["delayInMinutes"] * 60 - datetime.datetime.now().timestamp() <= 1800 and data[j][i]["plannedDepartureTime"] / 1000 + data[j][i]["delayInMinutes"] * 60 - datetime.datetime.now().timestamp() > 0 and data[j][i]["cancelled"] is False:
+                if data[j][i]["plannedDepartureTime"] / 1000 + data[j][i]["delayInMinutes"] * 60 - datetime.datetime.now().timestamp() <= 1620 and data[j][i]["plannedDepartureTime"] / 1000 + data[j][i]["delayInMinutes"] * 60 - datetime.datetime.now().timestamp() > 0 and data[j][i]["cancelled"] is False:
                     data[j][i].pop("sev")
                     data[j][i].pop("network")
                     data[j][i].pop("stopPointGlobalId")
@@ -125,7 +125,7 @@ def allStations(inputFiles, outputFile, stationName):
                     if boo is False:
                         nextDeparturesStation.append(data[j][i])
 
-            elif data[j][i]["plannedDepartureTime"] / 1000 - datetime.datetime.now().timestamp() <= 1800 and data[j][i]["plannedDepartureTime"] / 1000 - datetime.datetime.now().timestamp() > 0 and data[j][i]["cancelled"] is False:
+            elif data[j][i]["plannedDepartureTime"] / 1000 - datetime.datetime.now().timestamp() <= 1620 and data[j][i]["plannedDepartureTime"] / 1000 - datetime.datetime.now().timestamp() > 0 and data[j][i]["cancelled"] is False:
                 data[j][i].pop("sev")
                 data[j][i].pop("network")
                 data[j][i].pop("stopPointGlobalId")
