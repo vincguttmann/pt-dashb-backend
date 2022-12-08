@@ -241,4 +241,4 @@ def getNextBus():
 
 
 
-allStations(["Anhalter Platz.json", "Olympiazentrum.json", "Petuelring.json", "Milbertshofen.json","Lueneburger Strasse.json", "Curt-Mezger-Platz.json"], "/var/www/html/yeet.json", ["Anhalter Platz", "Olympiazentrum", "Petuelring", "Milbertshofen", "Lüneburger Straße", "Curt-Mezger-Platz"])
+allStations(["Anhalter Platz.json", "Olympiazentrum.json", "Petuelring.json", "Milbertshofen.json","Lueneburger Strasse.json", "Curt-Mezger-Platz.json"], "/var/www/html/yeet.json", ["Anhalter Platz", "Olympiazentrum", "Petuelring", "Milbertshofen", "Lüneburger Straße", "Curt-Mezger-Pl."])
