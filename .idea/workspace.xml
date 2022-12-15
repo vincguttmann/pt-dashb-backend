@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="797da56e-349e-4289-bb05-fc5041b37335" name="Changes" comment="finished json requests">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StationenAuslesen.py" beforeDir="false" afterPath="$PROJECT_DIR$/StationenAuslesen.py" afterDir="false" />
-    </list>
+    <list default="true" id="797da56e-349e-4289-bb05-fc5041b37335" name="Changes" comment="Curt-Mezger-Platz abgekürzt" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,7 +10,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="cd139dad1ddf5569026782427efded64be449f44" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -22,7 +19,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2GLYggxeijDrfEIoktAIJ6O4JVu" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="false" id="Update" />
   </component>
   <component name="ProjectViewState">
@@ -80,7 +77,119 @@
       <option name="project" value="LOCAL" />
       <updated>1668594391810</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="finished backend">
+      <created>1670397235656</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1670397235656</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Backend endgültig fertig">
+      <created>1670398340735</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1670398340735</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Backend endgültig fertig 2.0">
+      <created>1670399927775</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1670399927775</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Backend endgültig fertig 2.0">
+      <created>1670399978180</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1670399978180</updated>
+    </task>
+    <task id="LOCAL-00009" summary="&quot;Expressbus&quot; und &quot;via&quot; aus destination entfernt,&#10;Anzahl der Zeiten auf 3 limitiert">
+      <created>1670407580046</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1670407580046</updated>
+    </task>
+    <task id="LOCAL-00010" summary="pfad verändert">
+      <created>1670407902976</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1670407902981</updated>
+    </task>
+    <task id="LOCAL-00011" summary="typo fix">
+      <created>1670408313105</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1670408313105</updated>
+    </task>
+    <task id="LOCAL-00012" summary="typo fix2">
+      <created>1670408407061</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1670408407061</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Abschneiden nach &quot;Bf.&quot; in &quot;destination&quot;">
+      <created>1670408615786</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1670408615786</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Abschneiden von &quot;U&quot; am Ende">
+      <created>1670408885678</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1670408885678</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Reihenfolge der Stationen geändert">
+      <created>1670409245310</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1670409245310</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Reihenfolge der Pendelbusse geändert">
+      <created>1670410554919</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1670410554919</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Reihenfolge der Pendelbusse geändert">
+      <created>1670410951017</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1670410951017</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Reihenfolge der Pendelbusse geändert">
+      <created>1670411007222</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1670411007222</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Reihenfolge der Pendelbusse geändert">
+      <created>1670415263973</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1670415263973</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Curt-Mezger-Platz abgekürzt">
+      <created>1670482031493</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1670482031493</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -94,7 +203,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/Read" />
+                        <option value="Lukas" />
                       </list>
                     </value>
                   </entry>
@@ -135,6 +244,18 @@
     <MESSAGE value="test commit" />
     <MESSAGE value="Json request url" />
     <MESSAGE value="finished json requests" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished json requests" />
+    <MESSAGE value="finished backend" />
+    <MESSAGE value="Backend endgültig fertig" />
+    <MESSAGE value="Backend endgültig fertig 2.0" />
+    <MESSAGE value="&quot;Expressbus&quot; und &quot;via&quot; aus destination entfernt,&#10;Anzahl der Zeiten auf 3 limitiert" />
+    <MESSAGE value="pfad verändert" />
+    <MESSAGE value="typo fix" />
+    <MESSAGE value="typo fix2" />
+    <MESSAGE value="Abschneiden nach &quot;Bf.&quot; in &quot;destination&quot;" />
+    <MESSAGE value="Abschneiden von &quot;U&quot; am Ende" />
+    <MESSAGE value="Reihenfolge der Stationen geändert" />
+    <MESSAGE value="Reihenfolge der Pendelbusse geändert" />
+    <MESSAGE value="Curt-Mezger-Platz abgekürzt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Curt-Mezger-Platz abgekürzt" />
   </component>
 </project>
