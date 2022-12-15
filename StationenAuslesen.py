@@ -26,12 +26,15 @@ data = []
 
 for i in range(len(zwischenSpeicher)):
     usedUrl = url[:49] +zwischenSpeicher[i][5] +url[50:]
-    # store the response of URL
-    response = urlopen(usedUrl)
+    try:
+        # store the response of URL
+        response = urlopen(usedUrl)
 
-    # storing the JSON response
-    # from url in data
-    data.append(json.loads(response.read()))
+        # storing the JSON response
+        # from url in data
+        data.append(json.loads(response.read()))
+    except:
+        pass
 
 for i in range(len(data)):
     with open(benoetigteStationen[i] + ".json", "w") as outfile:
@@ -113,7 +116,7 @@ def allStations(inputFiles, outputFile, stationName):
                         data[j][i]["destination"] = data[j][i]["destination"].split(" via")[0]
                     if "Bf." in data[j][i]["destination"]:
                         data[j][i]["destination"] = data[j][i]["destination"].split("Bf.")[0]
-                    if data[j][i]["destination"][len(data[j][i]["destination"]) -1] == 'U':
+                    if data[j][i]["destination"][len(data[j][i]["destination"]) - 1] == 'U':
                         data[j][i]["destination"] = data[j][i]["destination"][:len(data[j][i]["destination"]) - 1]
 
                     boo = False
